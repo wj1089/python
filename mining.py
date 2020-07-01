@@ -75,7 +75,7 @@ class Service:
         print('6. 노이즈 필터링 후 시그널 추출')
 
     def frequent_text(self):
-        print('7. 시그널 중에 상용빈도 정렬')
+        print('7. 시그널 중에 사용빈도 정렬')
 
     def wordcloud(self):
         print('8. 시각화')
@@ -103,6 +103,9 @@ class Controller:
 def print_nemu():        
     print('0. Exit')
     print('1. 사전 다운로드')
+
+
+
     return  input('메뉴 선택\n')
     
 app = Controller()
@@ -110,9 +113,10 @@ while 1:
     menu = print_nemu()
     if menu == '1':
         app.download_dictionary()
-    elif menu == '0':
+    if menu == '2':
+        app.data_analysis()
+    if menu == '0':
         break
-    
     
     
     
